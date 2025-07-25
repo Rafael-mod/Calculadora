@@ -1,0 +1,57 @@
+.calculadora{
+    width:500px;
+    height: 650px;  
+    border: 5px solid #000;
+    margin:  auto;
+    border-radius: 30px;
+    background-color: #67d5e4;
+}
+body{
+    background-color: lightblue
+}
+
+#tela #resultado{
+    border: 2px solid #000;
+    margin: 20px 20px 0 20px;
+    width: 90%; 
+    height: 90px;
+    border-radius: 10px;
+    background-color: white;
+    font-size: 2em;
+}
+
+#teclado{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    width: 90%;
+    height: 75%;
+    margin: 20px auto;
+    border: 2px solid #000;
+    border-radius: 12px;
+}
+
+.botão{
+    border-color: black;
+    font-size: 1.5em;
+    background-color: lightgray
+}
+.botão:active{
+    background-color: lightslategray;
+}
+#topleft{
+    border-top-left-radius: 10px;
+}
+#topright{
+    border-top-right-radius: 10px;
+}
+#downleft{
+    border-bottom-left-radius: 10px;
+}
+#downright{
+    border-bottom-right-radius: 10px;
+    background-color: rgb(97, 190, 221)
+}
+#number{
+    background-color: white;
+}
