@@ -11,18 +11,19 @@
     <div class="calculadora">
 
         <div id="tela">
-            <input type="text" id="resultado"  readonly>
+            <textarea name="text" id="resultado" value="" readonly></textarea>
+           <!--<input type="text" id="resultado"  readonly>-->
             <input type="text" id="memoria" hidden>
         </div>
         <div id="teclado">
 
-        <input  class='botão'   id="topleft"  type="button" data-real="%" value="%"> 
+        <input  class='botão'   id="topleft"  type="button" name="porcentagem" value="%"> 
         <input  class='botão'   type="button" value="CE">
         <input  class='botão'   type="button" name="apagartudo" value="C">
         <input  class='botão'   id="topright" name='apagar' type="button" value="⌫">
-        <input  class='botão'   type="button" value="¹/𝑥">
-        <input  class='botão'   type="button" value="x²">
-        <input  class='botão'   type="button" value="²√">
+        <input  class='botão'   type="button" name="reciproco" value="¹/𝑥">
+        <input  class='botão'   type="button" name="elevado" value="x²">
+        <input  class='botão'   type="button" name="raiz" value="²√">
         <input  class='botão'   type="button" data-real="/" value="÷">
         <input  class='botão number'  type="button"  value="7">
         <input  class='botão number'  type="button" value="8">
