@@ -12,33 +12,34 @@
 
         <div id="tela">
             <input type="text" id="resultado"  readonly>
+            <input type="text" id="memoria" hidden>
         </div>
         <div id="teclado">
 
-        <input  class='botão' id="topleft" type="button" value="%"> 
-        <input  class='botão' type="button" value="CE">
-        <input  class='botão' type="button" value="C">
-        <input  class='botão' id="topright" type="button" value="⌫">
-        <input  class='botão' type="button" value="¹/𝑥">
-        <input  class='botão' type="button" value="x²">
-        <input  class='botão' type="button" value="²√">
-        <input  class='botão' type="button" value="÷">
-        <input  class='botão'   id="number"type="button" value="7">
-        <input  class='botão'   id="number"type="button" value="8">
-        <input  class='botão'   id="number"type="button" value="9">
-        <input  class='botão' type="button" value="×">
-        <input  class='botão'   id="number" type="button" value="4">
-        <input  class='botão'   id="number"type="button" value="5">
-        <input  class='botão'   id="number" type="button" value="6">
-        <input  class='botão' type="button" value="-">
-        <input  class='botão'   id="number" type="button" value="1">
-        <input  class='botão'   id="number" type="button" value="2">
-        <input  class='botão'   id="number" type="button" value="3">
-        <input  class='botão' type="button" value="+">
-        <input  class='botão' id="downleft" type="button" value="+/-">
-        <input  class='botão' id="number"type="button" value="0">
-        <input  class='botão' type="button" value=",">
-        <input  class='botão' id="downright" type="button" onclick='clicar()' value="=">
+        <input  class='botão'   id="topleft"  type="button" data-real="%" value="%"> 
+        <input  class='botão'   type="button" value="CE">
+        <input  class='botão'   type="button" name="apagartudo" value="C">
+        <input  class='botão'   id="topright" name='apagar' type="button" value="⌫">
+        <input  class='botão'   type="button" value="¹/𝑥">
+        <input  class='botão'   type="button" value="x²">
+        <input  class='botão'   type="button" value="²√">
+        <input  class='botão'   type="button" data-real="/" value="÷">
+        <input  class='botão number'  type="button"  value="7">
+        <input  class='botão number'  type="button" value="8">
+        <input  class='botão number'  type="button" value="9">
+        <input  class='botão'   type="button" data-real="*" value="×">
+        <input  class='botão number'  type="button"  value="4">
+        <input  class='botão number'  type="button"  value="5">
+        <input  class='botão number'  type="button"  value="6">
+        <input  class='botão'   type="button" value="-">
+        <input  class='botão number'  type="button"  value="1">
+        <input  class='botão number'  type="button"  value="2">
+        <input  class='botão number'  type="button"  value="3">
+        <input  class='botão'   type="button" value="+">
+        <input  class='botão'   id="downleft" type="button" value="+/-">
+        <input  class='botão number'   type="button"  value="0">
+        <input  class='botão'   type="button" data-real="." value=",">
+        <input  class='botão'   id="downright" name="=" type="button"  value="=">
         </div>
 
         <script src="script.js"></script> 

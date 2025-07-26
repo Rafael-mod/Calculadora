@@ -36,9 +36,6 @@ body{
     font-size: 1.5em;
     background-color: lightgray
 }
-.botão:active{
-    background-color: lightslategray;
-}
 #topleft{
     border-top-left-radius: 10px;
 }
@@ -50,8 +47,13 @@ body{
 }
 #downright{
     border-bottom-right-radius: 10px;
-    background-color: rgb(97, 190, 221)
+    background-color: rgb(97, 190, 221);
 }
-#number{
+.number{
     background-color: white;
+}
+.number:active,
+.botão:active,
+#downright:active {
+    background-color: lightslategray;
 }
