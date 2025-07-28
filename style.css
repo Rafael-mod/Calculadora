@@ -5,6 +5,7 @@
     margin:  auto;
     border-radius: 30px;
     background-color: #67d5e4;
+    box-shadow: 3px 3px 20px 1px rgb(80, 80, 80);
 }
 body{
     background-color: lightblue
