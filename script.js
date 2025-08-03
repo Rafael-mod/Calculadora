@@ -1,49 +1,82 @@
 
-    let resultadotela = document.getElementById('resultado');
-    let memoria = document.getElementById('memoria');
-    let botao = document.querySelectorAll('.botão');
+let resultadotela = document.getElementById('resultado');
+let memoria = document.getElementById('memoria');
+let botao = document.querySelectorAll('.botão');
 
 
 botao.forEach(function (botao){
     botao.addEventListener('click', function(){
-        if(botao && botao.classList.contains('number')){
-        resultadotela.value += botao.value;
-        memoria.value += botao.value;
-    }   else if(botao.name == "apagar"){
-        resultadotela.value  = resultadotela.value.slice(0, -1);
-        memoria.value  = memoria.value.slice(0, -1);
-    }   else if(botao.name == "apagartudo"){
-        resultadotela.value = ''
-        memoria.value = ''
-    }  else if(botao.name == "="){
-        resultadotela.value = eval(memoria.value) + "\n";
-        memoria.value = ''
-    }   else if(botao.name == 'reciproco'){
-        resultadotela.value = ''
-        resultadotela.value = eval(1 / memoria.value) + "\n"
-        memoria.value = ''
-    }   else if(botao.name == 'elevado'){
-        resultadotela.value = ''
-        resultadotela.value = eval(Math.pow(memoria.value, 2)) + "\n";
-        memoria.value = ''
-    }   else if(botao.name == 'raiz'){
-        resultadotela.value == ''
-        resultadotela.value= eval(Math.sqrt(memoria.value)) + "\n"; 
-        memoria.value = ''
-    }   else if (botao.name == 'porcentagem'){
-        let expressao = memoria.value;
-        const regex = /(\d+)([\+\-\*\/])(\d+)$/;
-        const match = expressao.match(regex);
-        if(match){
-            const num1 = Number(match[1])
-            const Operador = match[2];
-            const num2 = Number(match[3]);
-            const valorporcentagem = num1 *(num2/100);
-            memoria.value = `${num1}${Operador}${valorporcentagem}`;
-            resultadotela.value = eval(memoria.value) + "\n"
-            memoria.value = ''
-        }
-    }  else if (botao.name == 'negado') {
+    if(acoes[botao.name]){
+          acoes[botao.name](botao)
+    } else{
+        operador(botao)
+    }
+    })})
+
+/* Biblioteca para funções */
+
+const acoes = {
+    number: adicionarnumero,
+    apagar: apagar,
+    apagartudo: apagartudo,
+    '=': resultado,
+    reciproco: divisao,
+    elevado: elevado,
+    raiz: raizquadrada,
+    porcentagem: porcentagem,
+    negado: negar
+}
+
+/* ESPAÇO PARA FUNÇÕES */
+
+function adicionarnumero(botao) {
+    resultadotela.value += botao.value;
+    memoria.value += botao.value;
+}
+function apagar(botao){
+    resultadotela.value  = resultadotela.value.slice(0, -1);
+    memoria.value  = memoria.value.slice(0, -1);
+}
+function apagartudo(botao){
+    resultadotela.value = ''
+    memoria.value = ''
+}
+function resultado(botao){
+    resultadotela.value = eval(memoria.value) + "\n";
+    memoria.value = ''
+}
+function divisao(botao){
+    resultadotela.value = ''
+    resultadotela.value = eval(1 / memoria.value) + "\n"
+    memoria.value = ''
+}
+function elevado(botao){
+    resultadotela.value = ''
+    resultadotela.value = eval(Math.pow(memoria.value, 2)) + "\n";
+    memoria.value = ''
+}
+function raizquadrada(botao){
+    resultadotela.value == ''
+    resultadotela.value= eval(Math.sqrt(memoria.value)) + "\n"; 
+    memoria.value = ''
+}
+function porcentagem(botao){
+    let expressao = memoria.value;
+    const regex = /(\d+)([\+\-\*\/])(\d+)$/;
+    const match = expressao.match(regex);
+    if(match){
+    const num1 = Number(match[1])
+    const Operador = match[2];
+    const num2 = Number(match[3]);
+    const valorporcentagem = num1 *(num2/100);
+    memoria.value = `${num1}${Operador}${valorporcentagem}`;
+    resultadotela.value = eval(memoria.value) + "\n"
+    memoria.value = ''
+    }
+}
+
+/* funçao criada com o gemini */
+function negar(botao){
     let expressao = memoria.value;
     // Regex para encontrar o último número (inteiro ou decimal) e, opcionalmente, o operador antes dele.
     // Captura o operador no grupo 1 e o número no grupo 2.
@@ -96,9 +129,10 @@ botao.forEach(function (botao){
         memoria.value = '-';
         resultadotela.value = '-';
     }
-} else { 
-        const valor = botao.dataset.real || botao.value
-        resultadotela.value += botao.value;
-        memoria.value += valor;
-    }
-    })})
+}
+
+function operador(botao){
+    const valor = botao.dataset.real || botao.value
+    resultadotela.value += botao.value;
+    memoria.value += valor;
+}

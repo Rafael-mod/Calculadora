@@ -1,3 +1,5 @@
+
+/* CAIXA DA CALCULADORA */
 .calculadora{
     width:500px;
     height: 650px;  
@@ -7,10 +9,12 @@
     background-color: #67d5e4;
     box-shadow: 3px 3px 20px 1px rgb(80, 80, 80);
 }
+/* FUNDO DO SITE */
 body{
     background-color: lightblue
 }
 
+/* TELA */
 #tela #resultado{
     border: 2px solid #000;
     margin: 20px 20px 0 20px;
@@ -20,7 +24,7 @@ body{
     background-color: white;
     font-size: 2em;
 }
-
+/* TECLADO */
 #teclado{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -31,7 +35,6 @@ body{
     border: 2px solid #000;
     border-radius: 12px;
 }
-
 .botão{
     border-color: black;
     font-size: 1.5em;
@@ -53,8 +56,6 @@ body{
 .number{
     background-color: white;
 }
-.number:active,
-.botão:active,
-#downright:active {
+.number:active, .botão:active, #downright:active{
     background-color: lightslategray;
 }
