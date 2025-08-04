@@ -1,7 +1,7 @@
 # Calculadora
-Projetinho de calculadora basics
+Projeto de calculadora básica, desafio próprio de ínicio em javascript
 https://Rafael-mod.github.io/Calculadora
 
-Esse código está um lixo, e eu pedi ajuda pro gemini na config do botão +/-, pretendo melhorar esse código e a legibilidade dele, mas não quero ficar mt tempo nisso! Irei estudar mais e em breve trazer uma calculadora versão 2 ou outros projetos!
 
-1- URGENTE: Melhorar a legibilidade do código e a organização!
+Tive que pedir ajuda do gemini na configuração do botão de negar.
+A calculadora está minimamente organizada, ultima versão desse projeto básico.
